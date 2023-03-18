@@ -80,24 +80,24 @@ print(avg_centralitty_array)
 
 
 #--------------------------------------------------------------------------- find response score
-response_scores = {}
-for user in Graph1.nodes():
-    sent = 0
-    responded = 0
-    for source, target in Graph1.edges():
-        if source == user:
-            sent += 1
-            if (target, source) in Graph1.edges():
-                responded += 1
-        elif target == user:
-            if (source, target) in Graph1.edges():
-                sent += 1
-                responded += 1
-    response_scores[user] = responded / sent if sent > 0 else 0
+# response_scores = {}
+# for user in Graph1.nodes():
+#     sent = 0
+#     responded = 0
+#     for source, target in Graph1.edges():
+#         if source == user:
+#             sent += 1
+#             if (target, source) in Graph1.edges():
+#                 responded += 1
+#         elif target == user:
+#             if (source, target) in Graph1.edges():
+#                 sent += 1
+#                 responded += 1
+#     response_scores[user] = responded / sent if sent > 0 else 0
 
-# Print response score for each user
-print("Response Scores")
-print(response_scores)
+# # Print response score for each user
+# print("Response Scores")
+# print(response_scores)
 
 
 
