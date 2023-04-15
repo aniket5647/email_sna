@@ -67,7 +67,7 @@ for user in Graph1.nodes():
     for source, target in Graph1.edges():
         if source == user or target == user:
             contribution += betweenness_centrality[source] + betweenness_centrality[target] 
-            # contribution += betweenness_centrality[source] + email_counts[source] 
+          
     total_contribution[user] = contribution
 
 # Print total contribution for each user
@@ -76,7 +76,6 @@ print("Total Contribution")
 
 
 #Now find the social score 
-# degree_centrality_weight = 0.5
 social_scores = {}
 for user in Graph1.nodes():
     contribution = total_contribution[user]
