@@ -116,15 +116,13 @@ degree_between_neighbors = {}
 for node, neighbors in Graph1.adjacency():
     for neighbor in neighbors:
 
-        # get the degree of the node and neighbor
-        # node_degree = Graph1.degree(node)
-        # neighbor_degree = Graph1.degree(neighbor)
+      
 
         # get the in-degree and out-degree of the neighbor
         in_degree = matrix[node][neighbor]
         out_degree = matrix[neighbor][node]
 
-        # add the node, neighbor, node degree, neighbor degree, in-degree, and out-degree to the dictionary
+        
         degree_between_neighbors[(node, neighbor)] = [in_degree,out_degree]
 
 # print the degree_between_neighbors dictionary
